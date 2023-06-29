@@ -79,7 +79,7 @@ spec:
     - name: resolve-ocp-properties
       image: quay.io/openshift/origin-cli:latest
       script: |
-        
+        echo $(cat $(results)) 
         release_name=$(cat $(results.release-name.path))
         echo $release_name
 
