@@ -84,7 +84,7 @@ spec:
         echo $release_name
 
         set +e
-        previous_is_genenration=$(oc get integrationserver \
+        previous_is_generation=$(oc get integrationserver \
                 $release_name -o jsonpath='{.metadata.generation}' 2>/dev/null)
         set +e
 
