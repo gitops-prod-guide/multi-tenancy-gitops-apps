@@ -77,7 +77,7 @@ spec:
         resolve_prop '.integrationServer.baseImage' $(results.is-base-image.path)
 
     - name: resolve-ocp-properties
-      image: quay.io/openshift/origin-cli:4.14.0
+      image: quay.io/openshift/origin-cli:latest
       script: |
         
         release_name=$(cat $(results.release-name.path))
