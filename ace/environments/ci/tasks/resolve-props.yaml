@@ -80,7 +80,6 @@ spec:
       image: quay.io/openshift/origin-cli:latest
       script: |
         echo $(cat $(results)) 
-        echo $(cat $(results.release-name.path))
         
 
   workspaces:
