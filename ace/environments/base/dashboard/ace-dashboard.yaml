@@ -32,4 +32,4 @@ spec:
     class: ocs-storagecluster-cephfs
   replicas: 1
   useCommonServices: true
-  version: '12.0.6'
+  version: '12.0'
