@@ -30,6 +30,7 @@ spec:
   steps:
     - name: parse-source-properties
       image: mikefarah/yq:4.7.1
+      resources: {}
       script: |
         set -ex
 
@@ -78,6 +79,7 @@ spec:
 
     - name: resolve-ocp-properties
       image: quay.io/openshift/origin-cli:latest
+      resources: {}
       script: |
         
         release_name=$(cat $(results.release-name.path))
