@@ -82,7 +82,7 @@ spec:
       resources: {}
       script: |
         
-        release_name=$(cat $(results.release-name))
+        release_name=$(cat $(results))
         echo $release_name
 
   workspaces:
