@@ -2,13 +2,34 @@ apiVersion: appconnect.ibm.com/v1beta1
 kind: Dashboard
 metadata:
   name: ace-dashboard
+  # namespace: dev
 spec:
   license:
     accept: true
-    license: L-KSBM-C37J2R
+    license: L-APEH-CFZE47
     use: CloudPakForIntegrationNonProduction
-  useCommonServices: true
-  version: 12.0.1.0-r3
+  pod:
+    containers:
+      content-server:
+        resources:
+          limits:
+            cpu: 250m
+            memory: 512Mi
+          requests:
+            cpu: 50m
+            memory: 50Mi
+      control-ui:
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 50m
+            memory: 125Mi
   storage:
-    type: ephemeral
+    size: 5Gi
+    type: persistent-claim
+    class: ocs-storagecluster-cephfs
   replicas: 1
+  useCommonServices: true
+  version: '12.0.6'
