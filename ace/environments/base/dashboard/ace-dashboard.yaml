@@ -6,7 +6,7 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-APEH-CCHL5W
+    license: L-MJTK-WUU8HE
     use: CloudPakForIntegrationNonProduction
   pod:
     containers:
@@ -32,4 +32,4 @@ spec:
     class: ocs-storagecluster-cephfs
   replicas: 1
   useCommonServices: true
-  version: '12.0.5.0-r3'
+  version: '12.0.8.0'
